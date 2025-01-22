@@ -1,0 +1,35 @@
+1626059 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f80abefea10) = 1626060
+1626059 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f80abefea10) = 1626061
+1626059 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+1626060 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+1626059 <... clone resumed>, child_tidptr=0x7f80abefea10) = 1626062
+1626060 <... clone resumed>, child_tidptr=0x7f80abefea10) = 1626063
+1626061 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+1626062 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+1626061 <... clone resumed>, child_tidptr=0x7f80abefea10) = 1626064
+1626062 <... clone resumed>, child_tidptr=0x7f80abefea10) = 1626065
+1626062 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+1626063 +++ exited with 0 +++
+1626060 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1626063, si_uid=35404, si_status=0, si_utime=0, si_stime=0} ---
+1626062 <... clone resumed>, child_tidptr=0x7f80abefea10) = 1626066
+1626062 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+1626060 +++ exited with 0 +++
+1626059 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1626060, si_uid=35404, si_status=0, si_utime=0, si_stime=0} ---
+1626062 <... clone resumed>, child_tidptr=0x7f80abefea10) = 1626067
+1626062 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+1626064 +++ exited with 0 +++
+1626061 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1626064, si_uid=35404, si_status=0, si_utime=0, si_stime=0} ---
+1626065 +++ exited with 0 +++
+1626062 <... clone resumed>, child_tidptr=0x7f80abefea10) = 1626069
+1626062 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1626065, si_uid=35404, si_status=0, si_utime=0, si_stime=0} ---
+1626061 +++ exited with 0 +++
+1626059 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1626061, si_uid=35404, si_status=0, si_utime=0, si_stime=0} ---
+1626067 +++ exited with 0 +++
+1626062 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1626067, si_uid=35404, si_status=0, si_utime=0, si_stime=0} ---
+1626069 +++ exited with 0 +++
+1626062 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1626069, si_uid=35404, si_status=0, si_utime=0, si_stime=0} ---
+1626066 +++ exited with 0 +++
+1626062 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1626066, si_uid=35404, si_status=0, si_utime=0, si_stime=0} ---
+1626062 +++ exited with 0 +++
+1626059 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1626062, si_uid=35404, si_status=0, si_utime=0, si_stime=0} ---
+1626059 +++ exited with 0 +++

@@ -23,6 +23,8 @@
 #define _LEVELS 2
 struct seg_t { int procLevel; int procNum; pid_t pid; pid_t ppid; };
 struct seg_t* allocateSharedMemory(long size);
+
 void registerProc( pid_t pid, pid_t ppid, int procLevel, int procNum);
+
 void printProcRegistrations();
 #endif

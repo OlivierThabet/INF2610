@@ -7,6 +7,7 @@
 */
 
 #include "./libprocesslab/libprocesslab.h"
+#include <pthread.h>
 
 #define m 1000000
 #define nb 4
