@@ -40,7 +40,7 @@ void question1() {
 
         pid_t pid2_1 = fork();
         if (pid2_1 == 0) {
-            create_process("level2.2");
+            registerProc(getpid(), getppid(), 0, 0);
             exit(0); 
         }
         wait(NULL);
@@ -49,29 +49,29 @@ void question1() {
 
     pid3 = fork();
     if (pid3 == 0) {
-        create_process("level1.3");
+        registerProc(getpid(), getppid(), 0, 0);
 
         pid_t pid3_1 = fork();
         if (pid3_1 == 0) {
-            create_process("level2.3");
+            registerProc(getpid(), getppid(), 0, 0);
             exit(0);
         }
 
         pid_t pid3_2 = fork();
         if (pid3_2 == 0) {
-            create_process("level2.4");
+            registerProc(getpid(), getppid(), 0, 0);
             exit(0); 
         }
 
         pid_t pid3_3 = fork();
         if (pid3_3 == 0) {
-            create_process("level2.5");
+            registerProc(getpid(), getppid(), 0, 0);
             exit(0);
         }
 
         pid_t pid3_4 = fork();
         if (pid3_4 == 0) {
-            create_process("level2.6");
+            registerProc(getpid(), getppid(), 0, 0);
             exit(0);
         }
 
