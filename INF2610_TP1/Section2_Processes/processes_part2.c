@@ -55,5 +55,21 @@ void question2()
   printf("sum[0] + sum[1] + ... + sum[nb-1] = %ld\n", totalSum);
   printf("m * (m + 1) / 2 = %ld\n", theoSum);
 
+  /*
+  nb = 1 :
+  real    0m0,011s
+  user    0m0,006s
+  sys     0m0,004s
 
+  nb = 4 :
+  real    0m0,012s
+  user    0m0,023s
+  sys     0m0,002s
+
+  nb = 8 :
+  real    0m0,006s
+  user    0m0,010s
+  sys     0m0,003s
+
+   */
 }
