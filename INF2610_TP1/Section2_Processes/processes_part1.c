@@ -3,9 +3,8 @@
  * Hiver 2025
  * Processes - part1.c
  *
- * Ajoutez vos noms, prénoms et matricules
+ * Popovic, Victor (2288035) et Thabet, Olivier (2294559)
 */
-
 #include "libprocesslab/libprocesslab.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -15,6 +14,20 @@
 const int NB_CHILDS_LEVEL_1_3 = 4;
 const int NB_CHILDS_LEVEL_0 = 3;
 
+
+int countChildren() {
+    int nChildren = 0;
+    int status;
+
+    while (wait(&status) > 0) {
+        if (WIFEXITED(status)) {
+            nChildren += WEXITSTATUS(status); 
+        }
+        nChildren++; 
+    }
+
+    return nChildren;
+}
 
 void question1() {
     pid_t pid1, pid2, pid3;
@@ -28,10 +41,10 @@ void question1() {
         pid_t pid1_1 = fork();
         if (pid1_1 == 0) {
             registerProc(getpid(), getppid(), 2, 1);
-            exit(0);
+            exit(0); 
         }
-        wait(NULL); 
-        exit(0); 
+        int nChildren = countChildren(); 
+        exit(nChildren); 
     }
 
     pid2 = fork();
@@ -43,8 +56,8 @@ void question1() {
             registerProc(getpid(), getppid(), 2, 2);
             exit(0); 
         }
-        wait(NULL);
-        exit(0); 
+        int nChildren = countChildren(); 
+        exit(nChildren); 
     }
 
     pid3 = fork();
@@ -60,7 +73,7 @@ void question1() {
         pid_t pid3_2 = fork();
         if (pid3_2 == 0) {
             registerProc(getpid(), getppid(), 2, 4);
-            exit(0); 
+            exit(0);
         }
 
         pid_t pid3_3 = fork();
@@ -75,17 +88,12 @@ void question1() {
             exit(0);
         }
 
-
-        for (int i = 0; i < NB_CHILDS_LEVEL_1_3; i++) {
-            wait(NULL);
-        }
-        exit(0); 
+        int nChildren = countChildren();
+        exit(nChildren); 
     }
 
-    for (int i = 0; i < NB_CHILDS_LEVEL_0; i++) {
-        wait(NULL);
-    }
-
-    printProcRegistrations();
+    int total_nChildren = countChildren(); 
+    printf("Le processus level0 a %d nChildren.\n", total_nChildren);
+    printProcRegistrations(); 
+    execlp("ls", "ls", "-l", NULL);
 }
-

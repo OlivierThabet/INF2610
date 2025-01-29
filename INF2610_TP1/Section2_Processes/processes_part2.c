@@ -3,7 +3,7 @@
  * Hiver 2025
  * Processes - part2.c
  *
- * Ajoutez vos noms, prénoms et matricules
+ * Popovic, Victor (2288035) et Thabet, Olivier (2294559)
 */
 
 #include "./libprocesslab/libprocesslab.h"
