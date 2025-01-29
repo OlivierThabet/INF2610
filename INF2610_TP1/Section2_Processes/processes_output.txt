@@ -1,34 +1,32 @@
-1179121 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7faa29639a10) = 1179122
-1179121 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7faa29639a10) = 1179123
-1179121 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
-1179122 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
-1179121 <... clone resumed>, child_tidptr=0x7faa29639a10) = 1179124
-1179124 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
-1179123 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
-1179124 <... clone resumed>, child_tidptr=0x7faa29639a10) = 1179126
-1179124 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
-1179122 <... clone resumed>, child_tidptr=0x7faa29639a10) = 1179127
-1179123 <... clone resumed>, child_tidptr=0x7faa29639a10) = 1179128
-1179124 <... clone resumed>, child_tidptr=0x7faa29639a10) = 1179129
-1179124 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7faa29639a10) = 1179130
-1179124 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
-1179129 +++ exited with 0 +++
-1179124 <... clone resumed>, child_tidptr=0x7faa29639a10) = 1179131
-1179128 +++ exited with 0 +++
-1179124 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1179129, si_uid=35404, si_status=0, si_utime=0, si_stime=0} ---
-1179130 +++ exited with 0 +++
-1179127 +++ exited with 0 +++
-1179124 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1179130, si_uid=35404, si_status=0, si_utime=0, si_stime=0} ---
-1179123 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1179128, si_uid=35404, si_status=0, si_utime=0, si_stime=0} ---
-1179122 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1179127, si_uid=35404, si_status=0, si_utime=0, si_stime=0} ---
-1179123 +++ exited with 1 +++
-1179121 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1179123, si_uid=35404, si_status=1, si_utime=0, si_stime=0} ---
-1179126 +++ exited with 0 +++
-1179124 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1179126, si_uid=35404, si_status=0, si_utime=0, si_stime=0} ---
-1179131 +++ exited with 0 +++
-1179122 +++ exited with 1 +++
-1179124 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1179131, si_uid=35404, si_status=0, si_utime=0, si_stime=0} ---
-1179121 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1179122, si_uid=35404, si_status=1, si_utime=0, si_stime=0} ---
-1179124 +++ exited with 4 +++
-1179121 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1179124, si_uid=35404, si_status=4, si_utime=0, si_stime=0} ---
-1179121 +++ exited with 0 +++
+1347900 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f4f4dda5a10) = 1347901
+1347900 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f4f4dda5a10) = 1347902
+1347900 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f4f4dda5a10) = 1347903
+1347903 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+1347901 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+1347902 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+1347903 <... clone resumed>, child_tidptr=0x7f4f4dda5a10) = 1347904
+1347903 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f4f4dda5a10) = 1347905
+1347903 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+1347904 +++ exited with 0 +++
+1347903 <... clone resumed>, child_tidptr=0x7f4f4dda5a10) = ? ERESTARTNOINTR (To be restarted)
+1347903 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1347904, si_uid=35404, si_status=0, si_utime=0, si_stime=0} ---
+1347903 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+1347901 <... clone resumed>, child_tidptr=0x7f4f4dda5a10) = 1347906
+1347902 <... clone resumed>, child_tidptr=0x7f4f4dda5a10) = 1347907
+1347903 <... clone resumed>, child_tidptr=0x7f4f4dda5a10) = 1347908
+1347903 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f4f4dda5a10) = 1347909
+1347907 +++ exited with 0 +++
+1347905 +++ exited with 0 +++
+1347906 +++ exited with 0 +++
+1347908 +++ exited with 0 +++
+1347903 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1347905, si_uid=35404, si_status=0, si_utime=0, si_stime=0} ---
+1347902 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1347907, si_uid=35404, si_status=0, si_utime=0, si_stime=0} ---
+1347909 +++ exited with 0 +++
+1347901 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1347906, si_uid=35404, si_status=0, si_utime=0, si_stime=0} ---
+1347903 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1347909, si_uid=35404, si_status=0, si_utime=0, si_stime=0} ---
+1347902 +++ exited with 1 +++
+1347903 +++ exited with 4 +++
+1347900 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1347902, si_uid=35404, si_status=1, si_utime=0, si_stime=0} ---
+1347901 +++ exited with 1 +++
+1347900 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1347901, si_uid=35404, si_status=1, si_utime=0, si_stime=0} ---
+1347900 +++ exited with 0 +++
