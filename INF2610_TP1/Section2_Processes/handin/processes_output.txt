@@ -1,0 +1,32 @@
+1347900 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f4f4dda5a10) = 1347901
+1347900 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f4f4dda5a10) = 1347902
+1347900 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f4f4dda5a10) = 1347903
+1347903 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+1347901 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+1347902 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+1347903 <... clone resumed>, child_tidptr=0x7f4f4dda5a10) = 1347904
+1347903 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f4f4dda5a10) = 1347905
+1347903 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+1347904 +++ exited with 0 +++
+1347903 <... clone resumed>, child_tidptr=0x7f4f4dda5a10) = ? ERESTARTNOINTR (To be restarted)
+1347903 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1347904, si_uid=35404, si_status=0, si_utime=0, si_stime=0} ---
+1347903 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+1347901 <... clone resumed>, child_tidptr=0x7f4f4dda5a10) = 1347906
+1347902 <... clone resumed>, child_tidptr=0x7f4f4dda5a10) = 1347907
+1347903 <... clone resumed>, child_tidptr=0x7f4f4dda5a10) = 1347908
+1347903 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f4f4dda5a10) = 1347909
+1347907 +++ exited with 0 +++
+1347905 +++ exited with 0 +++
+1347906 +++ exited with 0 +++
+1347908 +++ exited with 0 +++
+1347903 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1347905, si_uid=35404, si_status=0, si_utime=0, si_stime=0} ---
+1347902 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1347907, si_uid=35404, si_status=0, si_utime=0, si_stime=0} ---
+1347909 +++ exited with 0 +++
+1347901 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1347906, si_uid=35404, si_status=0, si_utime=0, si_stime=0} ---
+1347903 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1347909, si_uid=35404, si_status=0, si_utime=0, si_stime=0} ---
+1347902 +++ exited with 1 +++
+1347903 +++ exited with 4 +++
+1347900 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1347902, si_uid=35404, si_status=1, si_utime=0, si_stime=0} ---
+1347901 +++ exited with 1 +++
+1347900 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1347901, si_uid=35404, si_status=1, si_utime=0, si_stime=0} ---
+1347900 +++ exited with 0 +++
