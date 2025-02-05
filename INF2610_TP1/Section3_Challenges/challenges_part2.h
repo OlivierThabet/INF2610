@@ -16,7 +16,7 @@
 #include <stdbool.h>
 
 typedef struct {
-    short* matrix;
+    short** matrix;
     short rows;
     short cols;
 } MatrixInfos;
