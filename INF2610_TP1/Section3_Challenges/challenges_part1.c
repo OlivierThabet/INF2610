@@ -8,7 +8,7 @@
 
 #include "challenges_part1.h"
 
-#define OUTPUT_FILE "challenge1_output.txt"
+#define OUTPUT_FILE "challenges_output.txt"
 
 void write_directory_info(const char *dir_path, int pid, int ppid, const char *txt_files)
 {

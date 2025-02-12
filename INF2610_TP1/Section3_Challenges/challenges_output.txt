@@ -1,0 +1,322 @@
+Répertoire : root/dir_2_level_1/dir_2_level_2/dir_0_level_3
+PID : 742406
+PPID : 742404
+Fichiers:
+file_1_level_4.txt
+file_2_level_4.txt
+file_0_level_4.txt
+file_3_level_4.txt
+file_4_level_4.txt
+
+
+Répertoire : root/dir_2_level_1/dir_2_level_2
+PID : 742404
+PPID : 742403
+Fichiers:
+file_1_level_3.txt
+file_2_level_3.txt
+
+
+Répertoire : root/dir_2_level_1/dir_0_level_2/dir_1_level_3
+PID : 742408
+PPID : 742407
+Fichiers:
+file_1_level_4.txt
+file_2_level_4.txt
+file_0_level_4.txt
+file_3_level_4.txt
+file_5_level_4.txt
+file_4_level_4.txt
+
+
+Répertoire : root/dir_2_level_1/dir_0_level_2/dir_2_level_3
+PID : 742409
+PPID : 742407
+Fichiers:
+file_1_level_4.txt
+file_2_level_4.txt
+file_0_level_4.txt
+
+
+Répertoire : root/dir_2_level_1/dir_0_level_2/dir_0_level_3
+PID : 742411
+PPID : 742407
+Fichiers:
+file_1_level_4.txt
+file_2_level_4.txt
+file_0_level_4.txt
+file_6_level_4.txt
+file_3_level_4.txt
+file_5_level_4.txt
+file_4_level_4.txt
+
+
+Répertoire : root/dir_2_level_1/dir_0_level_2/dir_5_level_3
+PID : 742412
+PPID : 742407
+Fichiers:
+file_1_level_4.txt
+file_2_level_4.txt
+file_0_level_4.txt
+file_6_level_4.txt
+file_3_level_4.txt
+file_5_level_4.txt
+file_4_level_4.txt
+
+
+Répertoire : root/dir_2_level_1/dir_0_level_2
+PID : 742407
+PPID : 742403
+Fichiers:
+file_6_level_3.txt
+file_4_level_3.txt
+file_3_level_3.txt
+
+
+Répertoire : root/dir_2_level_1/dir_1_level_2/dir_1_level_3
+PID : 742415
+PPID : 742414
+Fichiers:
+file_1_level_4.txt
+file_2_level_4.txt
+file_0_level_4.txt
+
+
+Répertoire : root/dir_2_level_1/dir_1_level_2/dir_0_level_3
+PID : 742417
+PPID : 742414
+Fichiers:
+file_1_level_4.txt
+file_2_level_4.txt
+file_0_level_4.txt
+file_3_level_4.txt
+file_5_level_4.txt
+file_4_level_4.txt
+
+
+Répertoire : root/dir_2_level_1/dir_1_level_2/dir_4_level_3
+PID : 742420
+PPID : 742414
+Fichiers:
+file_1_level_4.txt
+file_2_level_4.txt
+file_0_level_4.txt
+file_3_level_4.txt
+file_5_level_4.txt
+file_4_level_4.txt
+
+
+Répertoire : root/dir_2_level_1/dir_1_level_2
+PID : 742414
+PPID : 742403
+Fichiers:
+file_5_level_3.txt
+file_2_level_3.txt
+file_3_level_3.txt
+
+
+Répertoire : root/dir_2_level_1
+PID : 742403
+PPID : 742402
+Fichiers:
+
+
+Répertoire : root/dir_3_level_1/dir_2_level_2/dir_2_level_3
+PID : 742427
+PPID : 742426
+Fichiers:
+file_1_level_4.txt
+file_2_level_4.txt
+file_0_level_4.txt
+file_6_level_4.txt
+file_3_level_4.txt
+file_5_level_4.txt
+file_4_level_4.txt
+
+
+Répertoire : root/dir_3_level_1/dir_2_level_2/dir_0_level_3
+PID : 742429
+PPID : 742426
+Fichiers:
+file_1_level_4.txt
+file_2_level_4.txt
+file_0_level_4.txt
+file_3_level_4.txt
+file_5_level_4.txt
+file_4_level_4.txt
+
+
+Répertoire : root/dir_3_level_1/dir_2_level_2/dir_3_level_3
+PID : 742431
+PPID : 742426
+Fichiers:
+file_1_level_4.txt
+file_2_level_4.txt
+file_0_level_4.txt
+file_3_level_4.txt
+
+
+Répertoire : root/dir_3_level_1/dir_2_level_2
+PID : 742426
+PPID : 742425
+Fichiers:
+file_1_level_3.txt
+
+
+Répertoire : root/dir_3_level_1/dir_0_level_2/dir_1_level_3
+PID : 742436
+PPID : 742435
+Fichiers:
+file_1_level_4.txt
+file_2_level_4.txt
+file_0_level_4.txt
+file_3_level_4.txt
+
+
+Répertoire : root/dir_3_level_1/dir_0_level_2/dir_2_level_3
+PID : 742438
+PPID : 742435
+Fichiers:
+file_1_level_4.txt
+file_2_level_4.txt
+file_0_level_4.txt
+file_3_level_4.txt
+
+
+Répertoire : root/dir_3_level_1/dir_0_level_2
+PID : 742435
+PPID : 742425
+Fichiers:
+file_0_level_3.txt
+
+
+Répertoire : root/dir_3_level_1/dir_3_level_2/dir_2_level_3
+PID : 742444
+PPID : 742442
+Fichiers:
+file_1_level_4.txt
+file_2_level_4.txt
+file_0_level_4.txt
+file_3_level_4.txt
+file_4_level_4.txt
+
+
+Répertoire : root/dir_3_level_1/dir_3_level_2/dir_0_level_3
+PID : 742447
+PPID : 742442
+Fichiers:
+file_1_level_4.txt
+file_2_level_4.txt
+file_0_level_4.txt
+
+
+Répertoire : root/dir_3_level_1/dir_3_level_2
+PID : 742442
+PPID : 742425
+Fichiers:
+file_1_level_3.txt
+
+
+Répertoire : root/dir_3_level_1/dir_1_level_2/dir_6_level_3
+PID : 742455
+PPID : 742453
+Fichiers:
+file_1_level_4.txt
+file_2_level_4.txt
+file_0_level_4.txt
+file_3_level_4.txt
+
+
+Répertoire : root/dir_3_level_1/dir_1_level_2/dir_1_level_3
+PID : 742457
+PPID : 742453
+Fichiers:
+file_1_level_4.txt
+file_2_level_4.txt
+file_0_level_4.txt
+file_3_level_4.txt
+file_4_level_4.txt
+
+
+Répertoire : root/dir_3_level_1/dir_1_level_2/dir_0_level_3
+PID : 742460
+PPID : 742453
+Fichiers:
+file_1_level_4.txt
+file_2_level_4.txt
+file_0_level_4.txt
+file_6_level_4.txt
+file_3_level_4.txt
+file_5_level_4.txt
+file_4_level_4.txt
+
+
+Répertoire : root/dir_3_level_1/dir_1_level_2/dir_5_level_3
+PID : 742462
+PPID : 742453
+Fichiers:
+file_1_level_4.txt
+file_2_level_4.txt
+file_0_level_4.txt
+file_6_level_4.txt
+file_3_level_4.txt
+file_5_level_4.txt
+file_4_level_4.txt
+
+
+Répertoire : root/dir_3_level_1/dir_1_level_2/dir_3_level_3
+PID : 742467
+PPID : 742453
+Fichiers:
+file_1_level_4.txt
+file_2_level_4.txt
+file_0_level_4.txt
+file_6_level_4.txt
+file_3_level_4.txt
+file_5_level_4.txt
+file_4_level_4.txt
+
+
+Répertoire : root/dir_3_level_1/dir_1_level_2/dir_4_level_3
+PID : 742469
+PPID : 742453
+Fichiers:
+file_1_level_4.txt
+file_2_level_4.txt
+file_0_level_4.txt
+file_3_level_4.txt
+file_5_level_4.txt
+file_4_level_4.txt
+
+
+Répertoire : root/dir_3_level_1/dir_1_level_2
+PID : 742453
+PPID : 742425
+Fichiers:
+file_2_level_3.txt
+
+
+Répertoire : root/dir_3_level_1
+PID : 742425
+PPID : 742402
+Fichiers:
+file_4_level_2.txt
+
+
+Répertoire : root/dir_1_level_1
+PID : 742473
+PPID : 742402
+Fichiers:
+file_0_level_2.txt
+file_3_level_2.txt
+file_2_level_2.txt
+file_1_level_2.txt
+
+
+Répertoire : root
+PID : 742402
+PPID : 592686
+Fichiers:
+file_0_level_1.txt
+
+
