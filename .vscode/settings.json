@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "libprocesslab.h": "c"
+        "libprocesslab.h": "c",
+        "stdio.h": "c"
     }
 }
