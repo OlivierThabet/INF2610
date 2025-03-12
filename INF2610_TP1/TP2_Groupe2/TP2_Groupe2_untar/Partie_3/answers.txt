@@ -1,0 +1,10 @@
+QuestionComprehension1:
+    Si le nombre de processus dépasse le nombre de cœurs disponibles (N + δ), la performance peut se dégrader en raison du 
+    surcoût lié au basculement de contexte entre les processus. Le système d'exploitation devra gérer plus de processus 
+    qu'il n'y a de cœurs physiques, entraînant unje dispute entre les processus pour l'accès aux ressources partagés
+    et une surcharge due à la synchronisation et à la communication interprocessus. Ainsi, l'augmentation du nombre 
+    de processus au-delà de N ne garantit pas une amélioration de la performance et peut même la réduire.
+
+QuestionComprehension2:
+    Une liste chaînée pourrait être utilisée. En effet, elle permet une allocation dynamique de la mémoire et facilite la 
+    fusion des sous-listes sans avoir besoin de déplacer des blocs de mémoire, comme un tableau le fait.
