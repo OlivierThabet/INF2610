@@ -2,26 +2,19 @@
  * École Polytechnique Montreal - GIGL
  * Hiver 2025
  *
- * Ajoutez vos noms, prénoms et matricules
+ * Popovic, Victor (2288035) et Thabet, Olivier (2294559)
 */
 
 #include "merge_sort.h"
 
-
-SharedData *shared_data;
-
-void log_sort_operation(int start, int end) {
-    FILE *log = fopen("sorted_array.txt", "a");
-    if (log) {
-        fprintf(log, "Start = %d, End = %d, sorted = [", start, end);
+ void log_sort_operation(int start, int end) {
+    FILE *file = fopen("sorted_array.txt", "a");
+        fprintf(file, "Start = %d, End = %d, sorted = [", start, end);
         for (int i = start; i <= end; i++) {
-            fprintf(log, "%d%s", shared_data->array[i], (i < end) ? ", " : "");
+            fprintf(file, "%d%s", shared_data->array[i], (i < end) ? ", " : "");
         }
-        fprintf(log, "]\n");
-        fclose(log);
-    } else {
-        perror("Error opening file");
-    }
+        fprintf(file, "]\n");
+        fclose(file);
 }
 
 int main(int argc, char *argv[]) {
@@ -32,7 +25,7 @@ int main(int argc, char *argv[]) {
     
     int size = atoi(argv[1]);
     int num_processes = atoi(argv[2]);
-
+       
     //CODE GENERE PAR CHAT GPT
 
     shared_data = mmap(NULL, sizeof(SharedData), 
@@ -49,19 +42,19 @@ int main(int argc, char *argv[]) {
     for (int i = 0; i < size; i++) {
         shared_data->array[i] = rand() % 100;
     }
-
-    show_array();
-
-    FILE *log = fopen("sorted_array.txt", "w");
-    if (log) {
-        fprintf(log, "array = [");
+    
+    FILE *file = fopen("sorted_array.txt", "w");
+        fprintf(file, "array = [");
         for (int i = 0; i < size; i++) {
-            fprintf(log, "%d%s", shared_data->array[i], (i < size - 1) ? ", " : "]");
+            fprintf(file, "%d%s", shared_data->array[i], (i < size - 1) ? ", " : "]");
         }
-        fprintf(log, "\n");
-        fclose(log);
-    }
-
+        fprintf(file, "\n");
+        fclose(file);
+    
+    
+    struct timeval start, end;
+    gettimeofday(&start, NULL);
+    
     int step = size / num_processes;
     pid_t pids[num_processes];
     
@@ -70,8 +63,13 @@ int main(int argc, char *argv[]) {
         int right = (i == num_processes - 1) ? size - 1 : (left + step - 1);
         
         if ((pids[i] = fork()) == 0) {
+            struct timeval process_start, process_end;
+            gettimeofday(&process_start, NULL);
             merge_sort(left, right);
+            gettimeofday(&process_end, NULL);
             log_sort_operation(left, right);
+            double elapsed = (process_end.tv_sec - process_start.tv_sec) + (process_end.tv_usec - process_start.tv_usec) / 1000000.0;
+            printf("Processus %d tri [%d - %d] en %.6f sec\n", getpid(), left, right, elapsed);
             exit(0);
         }
     }
@@ -91,7 +89,10 @@ int main(int argc, char *argv[]) {
         mid = right;
     }
     
-    show_array();
+    gettimeofday(&end, NULL);
+    
+    double total_time = (end.tv_sec - start.tv_sec) + (end.tv_usec - start.tv_usec) / 1000000.0;
+    printf("temps total : %.6f sec\n", total_time);
     
     return EXIT_SUCCESS;
 }
