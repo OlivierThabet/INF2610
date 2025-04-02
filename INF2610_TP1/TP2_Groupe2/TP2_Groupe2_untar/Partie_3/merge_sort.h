@@ -2,6 +2,7 @@
  * École Polytechnique Montreal - GIGL
  * Hiver 2025
  *
+ * Popovic, Victor (2288035) et Thabet, Olivier (2294559)
 */
 
 #include <stdio.h>

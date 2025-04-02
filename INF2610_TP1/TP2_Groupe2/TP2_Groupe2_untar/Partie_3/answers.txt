@@ -1,10 +1,75 @@
-QuestionComprehension1:
-    Si le nombre de processus dépasse le nombre de cœurs disponibles (N + δ), la performance peut se dégrader en raison du 
-    surcoût lié au basculement de contexte entre les processus. Le système d'exploitation devra gérer plus de processus 
-    qu'il n'y a de cœurs physiques, entraînant unje dispute entre les processus pour l'accès aux ressources partagés
-    et une surcharge due à la synchronisation et à la communication interprocessus. Ainsi, l'augmentation du nombre 
-    de processus au-delà de N ne garantit pas une amélioration de la performance et peut même la réduire.
+QuestionDeComprehensionPartie1:
+    1:
+        Si le nombre de processus dépasse le nombre de cœurs disponibles (N + δ), la performance peut se dégrader en raison du 
+        surcoût lié au basculement de contexte entre les processus. Le système d'exploitation devra gérer plus de processus 
+        qu'il n'y a de cœurs physiques, entraînant unje dispute entre les processus pour l'accès aux ressources partagés
+        et une surcharge due à la synchronisation et à la communication interprocessus. Ainsi, l'augmentation du nombre 
+        de processus au-delà de N ne garantit pas une amélioration de la performance et peut même la réduire.
 
-QuestionComprehension2:
-    Une liste chaînée pourrait être utilisée. En effet, elle permet une allocation dynamique de la mémoire et facilite la 
-    fusion des sous-listes sans avoir besoin de déplacer des blocs de mémoire, comme un tableau le fait.
+    2:
+        Une liste chaînée pourrait être utilisée. En effet, elle permet une allocation dynamique de la mémoire et facilite la 
+        fusion des sous-listes sans avoir besoin de déplacer des blocs de mémoire, comme un tableau le fait.
+
+QuestionDeComprehensionPartie2:
+    1:
+        Temps d'exécution avec parallélisme et journalisation (Tableau de 100 éléments):
+            N=1:    sans journalisation: 0.000210 sec       avec: 0.004971 sec
+
+            N=4:    sans journalisation: 0.001190 sec       avec: 0.017585 sec
+
+            N=8:    sans journalisation: 0.000379 sec       avec: 0.040051 sec
+
+            N=16:   sans journalisation: 0.002347 sec       avec: 0.079339 sec
+
+        Temps d'exécution traditionnel sans parallélisme et journalisation (Tableau de 100 éléments): 0,000037 seconds
+
+    2:  Comparativement au programme initial, notre programme parallélisé et journbalisé est 134, 475, 1082 et 2144 fois 
+        plus lent pour respectivement 1, 4, 8 et 16 processus.
+
+    3:  Oui, ce résultat nous surprend. En effet, on s'attend généralement à ce qu'un algorithme parallèle soit plus 
+        rapide qu'un algorithme séquentiel, surtout avec l'augmentation du nombre de processus. Cependant, ici, 
+        l'algorithme parallélisé est beaucoup plus lent que la version traditionnelle. 
+        Avec un peu de réflexion, on croit que cela est du à 2 raisons: la journalisation et les coûts associés aux 
+        changements de contexte. En effet, le merge_sort journalisé prends le temps d'écrire dans un fichier certaines
+        informations lors du tri, ce qui ralentit le temps d'exécution. De plus, les coûts associés aux changements de
+        contexte sont probablement plus importants que le temps sauvé en effectuant du parallélisme. Par exemple, à 
+        chaque fois que l'on crée un processus, on doit copier une partie des données et se synchroniser avec les autres, 
+        ce qui prend du temps.
+
+    4:
+        N=1:    sans journalisation: 0.000210 sec       avec: 0.004971 sec
+
+        N=4:    sans journalisation: 0.001190 sec       avec: 0.017585 sec
+
+        N=8:    sans journalisation: 0.000379 sec       avec: 0.040051 sec
+
+        N=16:   sans journalisation: 0.002347 sec       avec: 0.079339 sec
+
+        En regardant ces résultats, le programme sans journalisation est plus rapide.
+        Le programme est 24, 15, 105, 34 fois plus lent pour respectivement 1, 4, 8, 16 processus.
+        L'impact est plus fort avec un grand nombre de processus (N=8, N=16), car plus de processus essaient d’écrire 
+        en même temps, créant un goulot d’étranglement sur les accès d'écritures.
+
+    5:
+        Approche1: Utiliser un tampon (buffer) pour réduire les accès disque lors de la journalisation:
+            Au lieu d'écrire chaque opération individuellement, on stocke temporairement les résultats dans un buffer mémoire.
+            Ensuite, on écrit tout en une seule opération dans le fichier, réduisant ainsi la latence associé à l'écriture dans 
+            le fichier sorted_array.txt.
+
+        Approche2: Parallélisme à l'aide de threads au lieu de processus (Implémenté dans merge_sort_upgrade.c):
+            L'utilisation de threads permet un accès mémoire rapide, et rend les changements de contexte moins lourdes. En effet, les
+            threads partagent directement la mémoire du preocessus parent. Les copies de données ne sont donc pas nécéssaires.
+            Cela améliore considérablement la vitesse d'exécution par rapport à l'utilisation de processus (fork()).
+
+        Nous avons pris le choix arbitraire de comparé le parallélisme par processus sans journalisation et le parallélisme
+        avec threads sans journalisation: 
+
+        Temps d'exécution de l'approche 2 selon N threads:
+        N=16:   0.000715 sec
+        N=8:    0.000844 sec
+        N=4:    0.000883 sec
+        N=1:    0.000036 sec
+
+        En regardant ces résultats, l'approche améliorée avec threads est plus rapide que l'approche originale avec processus sans journalisation.
+        Le programme est 5.83x, 2.25x, 1.41x, et 3.28 plus rapide respectivement pour 1, 4, 8, et 16 threads. 
+

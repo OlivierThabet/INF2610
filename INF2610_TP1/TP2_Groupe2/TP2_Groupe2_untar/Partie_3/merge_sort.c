@@ -63,13 +63,10 @@ int main(int argc, char *argv[]) {
         int right = (i == num_processes - 1) ? size - 1 : (left + step - 1);
         
         if ((pids[i] = fork()) == 0) {
-            struct timeval process_start, process_end;
-            gettimeofday(&process_start, NULL);
+            
             merge_sort(left, right);
-            gettimeofday(&process_end, NULL);
+            
             log_sort_operation(left, right);
-            double elapsed = (process_end.tv_sec - process_start.tv_sec) + (process_end.tv_usec - process_start.tv_usec) / 1000000.0;
-            printf("Processus %d tri [%d - %d] en %.6f sec\n", getpid(), left, right, elapsed);
             exit(0);
         }
     }
