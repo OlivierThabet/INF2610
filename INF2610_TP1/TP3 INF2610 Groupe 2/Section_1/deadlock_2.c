@@ -22,9 +22,10 @@ int main() {
         exit(0);
     }
 
-    while(wait(NULL) > 0);
+
     char string[6] = "Salut!";
     write(fd[1], &string, strlen(string));
+     while(wait(NULL) > 0); // cette ligne a été bougée après l'exécution dans le tube. Cela permet 
     printf("Process completed!\n");
     close(fd[0]);
     close(fd[1]);

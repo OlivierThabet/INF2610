@@ -68,7 +68,7 @@ void* is_this_a_deadlock(void * args) {
     }
 
     if (a > 0) {
-        if (key == 17) while(1);
+        if (key == 17) sem_post(&mutex);//on remplace le while(1) par un sem_post par ce que 
         printf("A is positive\n");
     } else {
         printf("A is not positive\n");
