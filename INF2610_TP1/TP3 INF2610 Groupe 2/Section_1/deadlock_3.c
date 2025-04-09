@@ -1,3 +1,10 @@
+/*
+ * Ecole Polytechnique Montreal - GIGL
+ * Hiver 2025
+ * Challenges - deadlock_3.c
+ *
+ * Popovic, Victor (2288035) et Thabet, Olivier (2294559)
+*/
 #include <stdio.h>
 #include <unistd.h>
 #include <signal.h>
@@ -6,7 +13,11 @@
 #include <pthread.h>
 #include <semaphore.h>
 #define N_THREADS 10
-
+//Conditions d'interblocage:
+//1.Exclusion mutuelle: Ligne 21 le mutex est la ressource soit disponible soit allouée à un thread.
+//2.Détention et attente: Condition non-respecté: on attend pas pour une seconde ressource (il n'y a que le mutex).
+//3.Pas de réquisition: Ligne 27,98: Le thread block le mutex avec sem_wait et le débloque lui même avec post.
+//4.Attente circulaire: ligne 27 Chaque thread attend que le mutex soit libéré par un autre. 
 sem_t mutex;
 
 int flag = 0;
@@ -69,8 +80,8 @@ void* is_this_a_deadlock(void * args) {
 
     if (a > 0) {
         //ligne problématique
-        if (key == 17) sem_post(&mutex);//on remplace le while(1) par un sem_post par ce que...
-        //(il s'agit ici d'un blocage et non d'un interblocage, car la condition deux n'est pas remplie) 
+        //solution: on enlève cette ligne, car dès qu'on rendre dans le while(1) il n'y a aucun moyen de le break et donc la ressource n'est jamais libérée.
+        //(il s'agit ici d'un blocage et non d'un interblocage, car la condition deux n'est pas remplie (détention et attente)
 
         printf("A is positive\n");
     } else {

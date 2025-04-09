@@ -1,3 +1,10 @@
+/*
+ * Ecole Polytechnique Montreal - GIGL
+ * Hiver 2025
+ * Challenges - deadlock_1.c
+ *
+ * Popovic, Victor (2288035) et Thabet, Olivier (2294559)
+*/
 #include <stdio.h>
 #include <pthread.h>
 #include <semaphore.h>
@@ -12,7 +19,7 @@
 int buffer[BUFFER_SIZE];
 int ip;
 int ic;
-
+//Il s'agit ici d'un cas classique de producteur consomateur.
 sem_t sem_initial;
 sem_t sem_busy;
 sem_t sem_critical; //condition 3 - Pas de réquisition : sem_critical ne peut être réémis que par le producer/consommateur qui l'a pris à la base.
@@ -78,10 +85,12 @@ int main() {
     
    //section problématique 
     for(int i = 0; i < N_THREADS_2; i++){
+        sem_wait(&sem_initial); 
         buffer[ip] = 0;
         ip = (ip + 1) % BUFFER_SIZE;
         sem_post(&sem_busy); //solution: c'est la solution, car elle assure que les conso aient accès à 
-        //sem_busy après le flag car la production de sem_busy sera stoppée à ce moment.
+        //sem_busy après le flag car la production de sem_busy sera stoppée à ce moment. On ajoute un sem_wait(initial) puisque la présence d'un post
+        //fait qu 'il s'agit maintenant d'un section critique pour les consommateur qui utilisent initial.
     }
     //section problématique
 
