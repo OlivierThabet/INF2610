@@ -15,9 +15,9 @@
 #define N_THREADS 10
 //Conditions d'interblocage:
 //1.Exclusion mutuelle: Ligne 21 le mutex est la ressource soit disponible soit allouée à un thread.
-//2.Détention et attente: Condition non-respecté: on attend pas pour une seconde ressource (il n'y a que le mutex).
+//2.Détention et attente: Condition non-respecté: on attend pas pour une seconde ressource (il n'y a que le mutex et une fois qu'il est obtenue le thread devient indépendant des autres.).
 //3.Pas de réquisition: Ligne 27,98: Le thread block le mutex avec sem_wait et le débloque lui même avec post.
-//4.Attente circulaire: ligne 27 Chaque thread attend que le mutex soit libéré par un autre. 
+//4.Attente circulaire: Non-respectée: Une fois la ressource obtenu le thread devient indépendant des autres, ce n,est que les autres qui attendent après lui. 
 sem_t mutex;
 
 int flag = 0;

@@ -1,3 +1,10 @@
+/*
+ * Ecole Polytechnique Montreal - GIGL
+ * Hiver 2025
+ * Challenges - deadlock_45c
+ *
+ * Popovic, Victor (2288035) et Thabet, Olivier (2294559)
+*/
 #include <stdio.h>
 #include <pthread.h>
 #include <semaphore.h>
@@ -6,9 +13,9 @@
 #include <stdlib.h>
 
 //Les 4 conditions pour un interblocage:
-//1.Exclusion mutuelle: Ligne 16 le sémaphore sem_critical est la ressource soit disponible soit allouée à un thread.
+//1.Exclusion mutuelle: Ligne 23 le sémaphore sem_critical est la ressource soit disponible soit allouée à un thread.
 //2.Détention et attente: non-respectée: Le thread s'alloue le sémaphore et n'attend pas pour une autre ressource ensuite.
-//3.Pas de réquisition: Ligne 29, 34 ou 32: Chaque thread prend le sémaphore et le libère lui-même par la suite avec post.
+//3.Pas de réquisition: Ligne 36, 41 ou 39 (après solution): Chaque thread prend le sémaphore et le libère lui-même par la suite avec post.
 //4.Attente circulaire: Non-respectée: Une fois que le thread obtient la ressource, il fonctionne indépendemment des autres.
 #define ENTRY_CODE 7
 #define N_THREADS 5
